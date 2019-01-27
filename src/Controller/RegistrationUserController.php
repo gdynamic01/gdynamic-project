@@ -12,7 +12,7 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 class RegistrationUserController extends AbstractController
 {
     /**
-     * @Route("/registration/user", name="registration_user")
+     * @Route("/creation/compte", name="registration_user")
      */
     public function index(Request $request, UserPasswordEncoderInterface $passwordEncoder)
     {
@@ -24,14 +24,24 @@ class RegistrationUserController extends AbstractController
             // Encode the password
             $password = $passwordEncoder->encodePassword($user, $user->getPassword());
             $user->setPassword($password);
-
+            $user->setRoles($user->getRoles());
+            
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);
             $entityManager->flush();
 
             // Redirect page confirmation et envoie email d'activation compte
+            return $this->render(
+                'confirmation/creation-compte.html.twig', [
+                    'email' => $user->getEmail()
+                ]);
+            
         }
 
+        if(!is_null($this->getUser())){
+            return $this->redirectToRoute('home_page');
+        }
+        
         return $this->render(
             'registration_user/index.html.twig', [
             'form' => $form->createView(),

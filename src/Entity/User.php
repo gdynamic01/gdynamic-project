@@ -18,19 +18,25 @@ class User implements UserInterface
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=500)
+     * @ORM\Column(name="nom", type="string", length=500)
      */
     private $username;
+    
+    private $prenom;
+    
+    private $sexe;
+    
+    private $telephone;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=false)
      */
     private $password;
 
     private $passwordR;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", unique=true, length=255, nullable=false)
      */
     private $email;
 
@@ -40,9 +46,57 @@ class User implements UserInterface
     private $roles;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="boolean", options={"default":false})
      */
-    private $isActive;
+    private $isActive = false;
+
+    /**
+     * @return mixed
+     */
+    public function getPrenom()
+    {
+        return $this->prenom;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSexe()
+    {
+        return $this->sexe;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTelephone()
+    {
+        return $this->telephone;
+    }
+
+    /**
+     * @param mixed $prenom
+     */
+    public function setPrenom($prenom)
+    {
+        $this->prenom = $prenom;
+    }
+
+    /**
+     * @param mixed $sexe
+     */
+    public function setSexe($sexe)
+    {
+        $this->sexe = $sexe;
+    }
+
+    /**
+     * @param mixed $telephone
+     */
+    public function setTelephone($telephone)
+    {
+        $this->telephone = $telephone;
+    }
 
     public function getId(): ?int
     {
@@ -109,7 +163,13 @@ class User implements UserInterface
         return $this;
     }
 
+    /**
+     * Si le role ROLE_USER est defini par defaut si aucun role n'est attribué a l'utilisateur
+     */
     public function getRoles(){
+        if(empty($this->roles)) {
+            $this->roles[] = 'ROLE_USER';
+        }
         return $this->roles;
     }
 
@@ -127,4 +187,5 @@ class User implements UserInterface
     public function eraseCredentials()
     {
     }
+    
 }

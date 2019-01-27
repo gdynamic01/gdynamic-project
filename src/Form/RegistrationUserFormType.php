@@ -40,8 +40,8 @@ class RegistrationUserFormType extends AbstractType
                 'required' => true,
                 'attr' => ['class' => 'libelle-passwordR']
          ))
-            ->add('Valider', SubmitType::class, array('attr' => array('class'=>'btn-success bouton-valider')))
-            ->add('Annuler', ResetType::class, array('attr' => array('class'=>'btn-warning bouton-annuler')))
+            ->add('Valider', SubmitType::class, array('attr' => array('class'=>'btn btn-large btn-success bouton-valider')))
+            ->add('Annuler', ResetType::class, array('attr' => array('class'=>'btn btn-large btn-warning bouton-annuler')))
         ;
     }
 

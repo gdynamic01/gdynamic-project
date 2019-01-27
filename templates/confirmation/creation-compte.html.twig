@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} - Création compte{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block body %}
+	<div class="col-xs-4 col-lg-4 col-md-4"></div>
+	<div class="col-xs-4 col-lg-4 col-md-4">
+		<label> Merci de votre inscription </label>
+		<label> Pour activer votre compte veuillez cliquer sur le lien qui vous a &eacute;t&eacute; envoy&eacute; a l'adresse suivant: {{email}}</label>
+	</div>
+	<div class="col-xs-4 col-lg-4 col-md-4"></div>
+{% endblock %}
