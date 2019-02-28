@@ -1,6 +1,5 @@
 index:
     path: /
     defaults:
-        _controller: App\Controller\RegistrationUserController::index
-        path: /creation/compte
+        _controller: App\Controller\AccueilController::accueil
         permanent: true

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\creationCompte;
 
 use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -14,7 +14,7 @@ class RegistrationUserController extends AbstractController
     /**
      * @Route("/creation/compte", name="registration_user")
      */
-    public function index(Request $request, UserPasswordEncoderInterface $passwordEncoder)
+    public function createCompte(Request $request, UserPasswordEncoderInterface $passwordEncoder)
     {
         $user = new User();
         $form = $this->createForm(RegistrationUserFormType::class, $user);
@@ -43,7 +43,7 @@ class RegistrationUserController extends AbstractController
         }
         
         return $this->render(
-            'registration_user/index.html.twig', [
+            'registration_user/createCompte.html.twig', [
             'form' => $form->createView(),
             'controller_name' => 'RegistrationUserController',
         ]);
