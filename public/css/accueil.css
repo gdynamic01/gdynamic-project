@@ -1,0 +1,46 @@
+.bloc-recherche{
+	background: #808080bf;
+    border-radius: 5px;
+    margin-top: 2rem;
+}
+
+.bloc-recherche .col{
+	/*
+    margin-top: 13px;
+    margin-left: 17px;
+    padding-top: 6px;
+    padding-left: 11px;
+    padding-right: 17px;
+    background: white;*/
+    padding-bottom: 14px;
+    padding-left: 18px;
+    padding-top: 13px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+.titre{
+	text-align: center;
+}
+
+.titre h3{
+	font-size: 18px;
+}
+
+.a-entreprise{
+	background: blue;
+    border-radius: 20px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.a-entreprise a{
+	color: white !important;
+}
+
+.btn_rechercher{
+	background-color: blue;
+	color: white;
+}

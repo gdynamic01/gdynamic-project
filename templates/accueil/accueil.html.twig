@@ -5,12 +5,35 @@
 {% block stylesheets %}
     {{ parent() }}
     <link href="{{ asset('css/style.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/accueil.css') }}" rel="stylesheet" />
 {% endblock %}
 
 {% block body %}
-	<div class="col-lg-4 col-md-4"></div>
-    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-    	
+	<div class="col-lg-2 col-md-2"></div>
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+    	<div class="titre">
+    		<h1>Recherche d'emploi</h1>
+    		<h3>Trouvez l'emploi que vous meritez</h3>
+    	</div>
+    	<div class="bloc-recherche">
+    	   <form>
+  			 <div class="form-row">
+    			<div class="col">
+      				<label for="inputRechercher">Vous cherchez?</label>
+      				<input type="text" class="form-control" id="inputRechercher" placeholder=" search">
+    			</div>
+    			<div class="col">
+      				<label for="inputQuelPoste">Quel poste?</label>
+      				<input type="text" class="form-control" id="inputQuelPoste" placeholder=" Ex: commercial">
+    			</div>
+    			<div class="col">
+      				<label for="dansQuelleVille">Quelle ville?</label>
+      				<input type="text" class="form-control" id="dansQuelleVille" placeholder=" Ex: Conakry">
+    			</div>
+     			<button type="submit" class="btn btn_rechercher">Rechercher</button>
+  			</div>
+		   </form>
+    	</div>
     </div>
-    <div class="col-lg-4 col-md-4"></div>
+    <div class="col-lg-2 col-md-2"></div>
 {% endblock %}
