@@ -17,3 +17,11 @@ fieldset {
  .main{
  	margin-top: 10rem;
  }
+ 
+ .titre{
+	text-align: center;
+}
+
+.titre h3, .titre h4{
+	font-size: 18px;
+}

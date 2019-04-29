@@ -4,7 +4,6 @@
 
 {% block stylesheets %}
     {{ parent() }}
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/accueil.css') }}" rel="stylesheet" />
 {% endblock %}
 
@@ -20,7 +19,10 @@
   			 <div class="form-row">
     			<div class="col">
       				<label for="inputRechercher">Vous cherchez?</label>
-      				<input type="text" class="form-control" id="inputRechercher" placeholder=" search">
+      				<select class="form-control" id="inputRechercher">
+      					<option value="OFFRE_EMPLOI" selected>Offres emploi</option>
+      					<option value="OFFRE_DE_STAGE" selected>Offres de stages</option>
+      				</select>
     			</div>
     			<div class="col">
       				<label for="inputQuelPoste">Quel poste?</label>
@@ -33,6 +35,23 @@
      			<button type="submit" class="btn btn_rechercher">Rechercher</button>
   			</div>
 		   </form>
+    	</div>
+    	<!-- bloc de recherche rapide -->
+    	<div class="bloc-recherche-rapide">
+    		<div class="titre">
+    			<h2>Recherche rapide</h2>
+    		</div>
+    		<div class="different-bloc-de-recherche">
+    			<div class="lieux">
+    				<h6>Emploi par lieu</h6>
+    			</div>
+    			<div class="metiers">
+    				<h6>Emploi par metier</h6>
+    			</div>
+    			<div class="type-contrat">
+    				<h6>Emploi par type de contrat</h6>
+    			</div>
+    		</div>
     	</div>
     </div>
     <div class="col-lg-2 col-md-2"></div>

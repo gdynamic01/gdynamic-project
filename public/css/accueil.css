@@ -5,28 +5,17 @@
 }
 
 .bloc-recherche .col{
-	/*
-    margin-top: 13px;
-    margin-left: 17px;
-    padding-top: 6px;
-    padding-left: 11px;
-    padding-right: 17px;
-    background: white;*/
     padding-bottom: 14px;
     padding-left: 18px;
-    padding-top: 13px;
+    padding-top: 10px;
     border-radius: 6px;
     font-size: 12px;
     font-weight: bold;
     color: white;
 }
 
-.titre{
-	text-align: center;
-}
-
-.titre h3{
-	font-size: 18px;
+.bloc-recherche-rapide .titre{
+	margin-top: 4rem;
 }
 
 .a-entreprise{
@@ -43,4 +32,18 @@
 .btn_rechercher{
 	background-color: blue;
 	color: white;
+}
+
+.different-bloc-de-recherche{
+	margin-top: 2rem;
+}
+
+.lieux, .metiers, .type-contrat{
+	border: 1px solid #80808038;
+    border-radius: 4px;
+    padding: 8px 5px 8px 12px;
+    vertical-align: top;
+    display: inline-block;
+    width: 31.6%;
+    margin-left: 4px;
 }

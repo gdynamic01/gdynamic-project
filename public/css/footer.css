@@ -1,0 +1,14 @@
+.footer{
+	margin-top: 3rem;
+}
+
+.espace-candidat, .espace-recruteur, .a-propos, .liens-utiles{
+	/* border: 1px solid #80808038;
+    border-radius: 4px; */
+    padding: 8px 5px 8px 12px;
+    vertical-align: top;
+    display: inline-block;
+    width: 23.3%;
+    margin-left: 4px;
+    margin-top: .5rem;
+}
